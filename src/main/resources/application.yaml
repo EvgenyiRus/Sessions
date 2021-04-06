@@ -1,0 +1,27 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        default_batch_fetch_size: 20
+        format_sql: true
+#        Позволяет вставить в столбец ID значение
+        id:
+          new_generator_mappings: false
+
+  datasource:
+    username: sa
+    password:
+    url: jdbc:h2:mem:sessions
+    #tcp: jdbc:h2:tcp://localhost:9092/mem:sessions
+#    Путь относительно папки resources
+#    url: jdbc:h2:./db/voting
+#    Абсолютный путь
+#    url: jdbc:h2:С:/db/voting
+#  tcp: jdbc:h2:tcp://localhost:9092/~/sessions
+  h2:
+    console:
+      enabled: true
